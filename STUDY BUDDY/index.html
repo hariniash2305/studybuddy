@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Buddy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h1>Study Buddy</h1>
+      <button id="toggleThemeBtn" class="theme-toggle">🌓</button>
+    </header>
+
+    <div class="main-grid">
+      <section class="tasks-section">
+        <h2>📋 Daily Tasks</h2>
+        <div id="taskList" class="task-list"></div>
+        <div class="task-input">
+          <input type="text" id="newTask" placeholder="Add a new task">
+          <button id="addTaskBtn" class="primary-btn">Add Task</button>
+        </div>
+        <div class="streak-container">
+          <span id="streakCount" class="streak-count">0 ⭐</span>
+        </div>
+        <div id="progressContainer" class="progress-container">
+          <div id="progressBar"></div>
+        </div>
+      </section>
+
+      <section class="notes-section">
+        <h2>📝 Notes / Reminders</h2>
+        <textarea id="notes" class="notes-area" placeholder="Write your quick notes here..."></textarea>
+      </section>
+
+      <section class="quote-section">
+        <h2>💡 Motivational Quote</h2>
+        <div id="quoteBox" class="quote-box">"Stay focused, stay strong!"</div>
+        <button id="newQuoteBtn" class="secondary-btn">New Quote</button>
+      </section>
+
+      <section class="timer-section">
+        <h2>⏱️ Focus Timer</h2>
+        <div id="timerDisplay" class="timer-display">25:00</div>
+        <div class="timer-controls">
+          <button id="startTimerBtn" class="timer-btn">Start</button>
+          <button id="pauseTimerBtn" class="timer-btn">Pause</button>
+          <button id="resetTimerBtn" class="timer-btn">Reset</button>
+        </div>
+      </section>
+
+      <nav class="navigation-buttons">
+        <button id="flashcardsBtn" class="nav-btn" onclick="location.href='flashcards.html'">🃏 Flashcards</button>
+        <button class="nav-btn" onclick="location.href='quiz.html'">📝 Quiz</button>
+        <button class="nav-btn" onclick="location.href='progress.html'">📊 Progress</button>
+      </nav>
+    </div>
+  </div>
+
+  <audio id="streakSound" src="https://www.soundjay.com/buttons/sounds/button-09.mp3" preload="auto"></audio>
+  <canvas id="confettiCanvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>

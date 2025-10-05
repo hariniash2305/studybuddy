@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy Flashcards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="flashcards.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>🃏 Study Buddy Flashcards</h1>
+            <div class="header-controls">
+                <button id="toggleThemeBtn" class="theme-btn">🌓 Toggle Theme</button>
+                <button id="addCardBtn" class="primary-btn">➕ New Card</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="flashcardContainer">
+                <div id="flashcard" class="flashcard">
+                    <div class="front">
+                        <span class="card-hint">Question will appear here</span>
+                    </div>
+                    <div class="back">
+                        <span class="card-hint">Answer will appear here</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="controls" class="card-controls">
+                <button id="prevBtn" class="control-btn">⬅ Previous</button>
+                <button id="flipBtn" class="control-btn">🔄 Flip</button>
+                <button id="nextBtn" class="control-btn">Next ➡</button>
+                <button id="editBtn" class="control-btn">✏️ Edit</button>
+                <button id="deleteBtn" class="control-btn danger">🗑️ Delete</button>
+            </div>
+        </main>
+
+        <nav class="navigation">
+            <div class="nav-buttons">
+                <button onclick="location.href='index.html'" class="nav-btn">🏠 Home</button>
+                <button onclick="location.href='quiz.html'" class="nav-btn">📝 Quiz</button>
+            </div>
+        </nav>
+    </div>
+
+    <script src="flashcards.js"></script>
+</body>
+</html>

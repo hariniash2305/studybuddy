@@ -1,0 +1,278 @@
+/* =========================
+   🌟 Study Buddy - Final CSS
+   ========================= */
+
+/* 🎨 Theme Variables */
+:root {
+  --primary-color: #00345d;
+  --secondary-color: #79a1c0;
+  --background-color: #d0dee8;
+  --text-color: #001f42;
+  --border-radius: 8px;
+  --spacing: 20px;
+  --card-bg: #ffffff;
+  --shadow-color: #001f42;
+}
+
+/* 🌗 Dark Theme Overrides */
+body.dark {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #2d2d2d;
+  --shadow-color: #000000;
+}
+
+/* ✨ Smooth Theme Transition */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* =========================
+   📦 Layout & Containers
+   ========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+section {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 12px var(--shadow-color);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* =========================
+   📝 Typography
+   ========================= */
+h1 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* =========================
+   ✅ Task Section
+   ========================= */
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid var(--shadow-color);
+  border-radius: var(--border-radius);
+  font-size: 1em;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+/* =========================
+   🔘 Buttons
+   ========================= */
+.primary-btn,
+.secondary-btn,
+.timer-btn,
+.nav-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s, background-color 0.3s ease;
+  color: white; /* stays visible in dark mode */
+}
+
+.primary-btn,
+.secondary-btn,
+.nav-btn {
+  background-color: var(--primary-color);
+}
+
+/* Hover */
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =========================
+   ⏱ Timer Section
+   ========================= */
+.timer-display {
+  font-size: 3em;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* =========================
+   🗒 Notes Section
+   ========================= */
+.notes-area {
+  width: 91%;
+  min-height: 150px;
+  padding: 15px;
+  border: 2px solid var(--shadow-color);
+  border-radius: var(--border-radius);
+  resize: vertical;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+/* =========================
+   💬 Quote Box
+   ========================= */
+.quote-box {
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  margin: 15px 0;
+  font-style: italic;
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* =========================
+   🧭 Navigation
+   ========================= */
+.navigation-buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* =========================
+   🌓 Theme Toggle Button
+   ========================= */
+.theme-toggle {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Icon visibility */
+.light .dark-icon,
+.dark .light-icon {
+  display: inline-block;
+}
+
+.light .light-icon,
+.dark .dark-icon {
+  display: none;
+}
+
+/* =========================
+   📱 Responsive
+   ========================= */
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+/* =========================
+   🌗 Text Colors for Dark/Light Mode
+   ========================= */
+
+/* Headers */
+h1, h2 {
+  color: var(--text-color);
+  transition: color 0.5s ease;
+}
+
+/* Task labels and details */
+.task, 
+.task span, 
+.progress-detail .detail-label,
+.progress-detail .detail-value,
+.notes-area,
+.quote-box {
+  color: var(--text-color);
+  transition: color 0.5s ease;
+}
+
+/* Input text */
+input[type="text"] {
+  color: var(--text-color);
+  background-color: var(--card-bg);
+  border: 2px solid var(--shadow-color);
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Buttons text */
+button {
+  color: white; /* keep buttons readable */
+}
+
+/* Timer display */
+.timer-display {
+  color: var(--text-color);
+}
+/* =========================
+   📊 Progress Bars
+   ========================= */
+
+   #progressBar,
+   #todo-progress,
+   #quiz-progress,
+   #flashcard-progress {
+     color: var(--text-color); /* Text inside bar */
+     background-color: var(--primary-color);
+     border-radius: 8px;
+     text-align: center;
+     line-height: 1.8em; /* vertically center text */
+     transition: background-color 0.5s ease, color 0.5s ease;
+   }
+   
+   /* If you have the percentage text inside the bar */
+   .progress-detail span.detail-value {
+     color: var(--text-color);
+   }
+   

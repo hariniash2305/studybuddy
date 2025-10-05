@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <header class="app-header">
+                    <h1>Quiz Time</h1>
+                    <button id="toggleThemeBtn" class="theme-toggle" aria-label="Toggle theme">
+                        <span class="light-icon">🌞</span>
+                        <span class="dark-icon">🌙</span>
+                    </button>
+                </header>
+                <h1>📚 Study Quiz</h1>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p id="questionCounter" class="question-counter"></p>
+            </div>
+
+            <div class="quiz-content">
+                <h2 id="question"></h2>
+                <div id="options" class="options-container"></div>
+                <p id="result" class="result-message"></p>
+                <p id="explanation" class="explanation-text"></p>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="prev" class="nav-btn">Previous</button>
+                <button id="submit" class="submit-btn">Check Answer</button>
+                <button id="next" class="nav-btn">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

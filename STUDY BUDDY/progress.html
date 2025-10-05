@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Buddy - Progress</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h1>📊 Progress Tracker</h1>
+      <button id="toggleThemeBtn" class="theme-toggle">🌓</button>
+    </header>
+
+    <section class="progress-section">
+      <h2>🔥 Streak</h2>
+      <div id="streakCount" class="streak-count">0 ⭐</div>
+    </section>
+    <br>
+    <br>
+    <section class="progress-section">
+      <h2>📋 Tasks Progress</h2>
+      <div class="progress-bar-container">
+        <div id="todo-progress" class="progress-bar"></div>
+      </div>
+      <div id="todo-details" class="progress-details"></div>
+    </section>
+    <br>
+    <br>
+    <section class="progress-section">
+      <h2>📝 Quiz Progress</h2>
+      <div class="progress-bar-container">
+        <div id="quiz-progress" class="progress-bar"></div>
+      </div>
+      <div id="quiz-details" class="progress-details"></div>
+    </section>
+    <br>
+    <br>
+    <section class="progress-section">
+      <h2>🃏 Flashcards Progress</h2>
+      <div class="progress-bar-container">
+        <div id="flashcard-progress" class="progress-bar"></div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <section class="progress-section">
+      <h2>📅 Last Activity</h2>
+      <div id="last-activity" class="activity-log"></div>
+    </section>
+  </div>
+
+  <script src="progress.js"></script>
+</body>
+</html>
